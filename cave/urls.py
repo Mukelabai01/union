@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import include, path
 
 urlpatterns = [
+    path('', include('cazu.urls')),
     path('admin/', admin.site.urls),
     path('cazu/', include(('cazu.urls', 'cazu'), namespace='cazu')),
 ]
