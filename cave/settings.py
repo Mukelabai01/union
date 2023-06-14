@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-bohs7#v3-s1w2(6fh_l4%fc!9z265i!cg4s2wl3xmf5^l5_a_i
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['172.20.10.3','cavendish-d2a6029514fd.herokuapp.com']
+ALLOWED_HOSTS = ['172.20.10.3','serene-shelf-91664-9f7a60745008.herokuapp.com']
 
 
 # Application definition
@@ -119,11 +119,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+
 
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
