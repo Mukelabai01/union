@@ -1,1 +1,1 @@
-web: gunicorn cave.wsgi
+web: gunicorn cave.wsgi --log-file -
