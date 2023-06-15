@@ -16,6 +16,7 @@ import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 # ...
+MEDIA_URL = '/media/'
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
@@ -33,7 +34,7 @@ SECRET_KEY = 'django-insecure-bohs7#v3-s1w2(6fh_l4%fc!9z265i!cg4s2wl3xmf5^l5_a_i
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['172.20.10.3','serene-shelf-91664-9f7a60745008.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1','serene-shelf-91664-9f7a60745008.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -86,7 +87,8 @@ WSGI_APPLICATION = 'cave.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+
     }
 }
 
